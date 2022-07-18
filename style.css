@@ -1,0 +1,439 @@
+*{
+  box-sizing: border-box;
+  font-family:  sans-serif;
+}
+body{
+  margin: 0;
+ 
+}
+h1{
+  text-align: center;
+  font-size: 2.5rem;
+}
+h2{
+ text-align: center;
+ font-size: 2rem;
+}
+  
+a{
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+
+ }
+p {
+   font-size:1rem;
+   text-align: center;
+ }
+ 
+.dottedme-hr{
+  border: dotted 6px skyblue;
+  border-bottom: none;
+  margin: 30px auto;
+  width: 70;
+  
+}
+ 
+ [class*="col-"]{
+   width: 100%
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* navar design start from here*/
+ 
+ 
+.navbar{
+  background-color: #0c6168;
+  padding: 1% 7%;
+  text-align: center;
+}
+.navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.nav-heading{
+  color: white;
+  padding: 0px; 
+  padding-top: 10px;
+  
+  }
+.nav-menu{
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  
+}
+.nav-menu a{
+  background-color: #40868b;
+  border-radius: 5px;
+  margin: 7% 0%;
+  padding: 2px;
+  
+}
+.nav-menu a:hover{
+  background-color:  burlywood;
+
+}
+.nav-logo1{
+  border: 5px solid #0c6168;
+  border-radius:50%;
+}
+ /* navar design ends  here*/
+ 
+ 
+ 
+ 
+ 
+ 
+  /*  profile design start from here*/
+
+ 
+.Profile{
+  padding: 120px 30px;
+  position: relative;
+  text-align: center;
+}
+ 
+.Profile .top-weather-icon{ 
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  height: 100px;
+  width:100px;
+  transition:transform 2s ;
+}
+
+.Profile .top-weather-icon:hover{
+ 
+  transform: rotate(360deg);
+}
+
+.Profile .bottom-weather-icon{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    transition: transform 2s;
+    height: 100px;
+    width: 100px;
+  }
+.Profile .bottom-weather-icon:hover{
+   transform: rotate(360deg);
+ }
+.profile-bio h1{
+  color: black;
+  font-family: satisfy, cursive;
+  font-size: 50px;
+}
+.profile-bio p{
+  color: gray;
+  text-align: center;
+  margin : 0 auto 20px auto;
+}
+.Profile::after{
+  display: table;
+  content: " ";
+  clear: Both ;
+  
+}
+
+  /*  profile design ends here*/
+  
+  
+  
+    /*  cv design start from here*/
+    
+ .about-me{
+   background-color: #39a4ac ;
+   padding: 1% 7%;
+   color: white;
+   text-align: center;
+   font-family: Montesrrat, sans-serif;
+ }
+.about-me-img img{
+  border: 5px solid whitesmoke;
+  border-radius: 50%;
+  height: 150;
+  width: 200;
+  
+}
+
+.aboutme-des p{
+  font-size: 1.2rem;
+  
+}
+.cv-button  {
+  background-color:#052d2f;
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px;
+  
+}
+
+.cv-button:hover{
+  transition: 1s;
+  color: red;
+  background-color: rebeccapurple;
+}
+
+    /*  cv design ends here*/
+    
+    /*  card design starts from  here*/
+    
+  .professional-workexpreince{
+    padding: 4% 3%;
+  }
+ .professional-workexpreince .card1{
+   padding: 7px;
+   border-radius: 5px;
+   background-color: #a39e9e;
+   transition: 1.s;
+   height: 630px;
+   
+ }
+ 
+.card1:hover{
+  box-shadow: 0px 4px 8px 5px black ;
+}
+.icon{
+  padding: 1px
+}
+.icon {
+  text-align: center;
+  margin-top: 20px;
+}
+.icon .rounded{
+  border: 5px solid white;
+  border-radius: 59%;
+}
+.tittle h2{
+  background-color : #616161;
+  color:white;
+  padding: 2%
+}
+.professional-workexpreince{
+  clear: both;
+  display: table;
+  content:"" ;
+ }
+
+
+
+    /*  card design ends here*/
+    
+    
+    /*  porgressbar design starts from  here*/
+
+
+.progressbar{
+  padding: 0% 1%;
+  
+}
+
+.progressbar li{
+  list-style: none;
+  font-weight:bolder;
+  margin: 30px 10px;
+  text-transform:uppercase;
+  position: relative;
+  
+ 
+}
+.progressbar li::before{
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  left:0;
+  border-radius:1000px;
+  
+
+  
+  background-color: rgb(100, 300, 0,.3);
+  width :100%;
+  height: 10px;
+}
+  
+  
+  
+.progressbar li::after{
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  left:0;
+  border-radius:1000px;
+  
+
+  
+  background-color: rgb(100, 300, 0);
+  width :0%;
+  height: 10px;
+  
+  
+  animation-duration: 4s;
+  animation-delay:  2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  
+}
+
+.progressbar li.html::after{
+  animation-name: html;
+}
+  @keyframes html{
+    to{
+      width:90%;
+    }
+  }
+  
+  .progressbar li.css::after{
+  animation-name: css;
+}
+  @keyframes css{
+    to{
+      width:84%;
+    }
+  }
+  
+  .progressbar li.bostrap::after{
+  animation-name: bostrap;
+}
+  @keyframes bostrap{
+    to{
+      width:70%;
+    }
+  }
+  
+  
+  .progressbar li.js::after{
+  animation-name: js;
+}
+  @keyframes js{
+    to{
+      width:60%;
+    }
+  }
+
+.progressbar li.python::after{
+  animation-name: python;
+}
+  @keyframes python{
+    to{
+      width:50%;
+    }
+  }
+  
+  .progressbar li.c::after{
+  animation-name: c;
+}
+  @keyframes c{
+    to{
+      width:70%;
+    }
+  }
+  
+  .progressbar li.cc::after{
+  animation-name: cc;
+}
+  @keyframes cc{
+    to{
+      width:50%;
+    }
+  }
+  
+  
+
+
+ 
+    /*  porgressbar design   here*/
+
+    /* contact design starts from  here*/
+.contact1{
+  background-color: #39a4ac;
+  padding: 2% 7%;
+  
+  color:white;
+}
+.dottedhr{
+  border: dotted 6px skyblue;
+  border-bottom: none;
+  margin: 30px auto;
+  width: 70;
+  
+  
+}
+.contact1 input,textarea{
+  width: 100%;
+  padding:10px;
+  text-align:center;
+  border:none;
+  border-radius: 5px;
+  resize: none;
+  
+    }
+.contact1 button{
+  border-radius: 12px;
+  background-color: #052d2f;
+  color: white;
+  padding: 15px;
+  margin:10px ;
+  width:100px;
+  
+}
+.contact1 button:hover {
+  transition: 1s;
+  color: greenyellow;
+  }
+.contact1::after{  clear: both;
+  display :table;
+  
+  content:"";
+}
+
+    /* contact design ends  here*/
+    
+   /* fotter design starts from  here*/
+   
+   
+ .fotter{ 
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+    font-size: 0.8rem;
+    
+  }
+.fotter-menu a{
+   display: block;
+   margin: 15px 0px;
+   font-size: 1rem;
+ }
+
+.fotter-menu a::hover{
+background-color: rebeccapurple;
+ }
+ 
+ 
+
+.fotter::after{
+  display: table;
+  content: "";
+  clear: both;
+}
+
+
+
+
+
+
+
+
